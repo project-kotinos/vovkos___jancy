@@ -1486,7 +1486,7 @@ TypeMgr::getMulticastType (FunctionPtrType* functionPtrType)
 
 	// overloaded operators
 
-	type->m_binaryOperatorTable.setCount (BinOpKind__Count);
+	type->m_binaryOperatorTable.setCountZeroConstruct (BinOpKind__Count);
 	type->m_binaryOperatorTable [BinOpKind_RefAssign] = type->m_methodArray [MulticastMethodKind_Setup];
 	type->m_binaryOperatorTable [BinOpKind_AddAssign] = type->m_methodArray [MulticastMethodKind_Add];
 	type->m_binaryOperatorTable [BinOpKind_SubAssign] = type->m_methodArray [MulticastMethodKind_Remove];
@@ -2175,7 +2175,7 @@ TypeMgr::getDualTypeTuple (Type* type)
 	if (type->m_dualTypeTuple)
 		return type->m_dualTypeTuple;
 
-	DualTypeTuple* tuple = AXL_MEM_NEW (DualTypeTuple);
+	DualTypeTuple* tuple = AXL_MEM_ZERO_NEW (DualTypeTuple);
 	type->m_dualTypeTuple = tuple;
 	m_dualTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2187,7 +2187,7 @@ TypeMgr::getSimplePropertyTypeTuple (Type* type)
 	if (type->m_simplePropertyTypeTuple)
 		return type->m_simplePropertyTypeTuple;
 
-	SimplePropertyTypeTuple* tuple = AXL_MEM_NEW (SimplePropertyTypeTuple);
+	SimplePropertyTypeTuple* tuple = AXL_MEM_ZERO_NEW (SimplePropertyTypeTuple);
 	type->m_simplePropertyTypeTuple = tuple;
 	m_simplePropertyTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2199,7 +2199,7 @@ TypeMgr::getFunctionArgTuple (Type* type)
 	if (type->m_functionArgTuple)
 		return type->m_functionArgTuple;
 
-	FunctionArgTuple* tuple = AXL_MEM_NEW (FunctionArgTuple);
+	FunctionArgTuple* tuple = AXL_MEM_ZERO_NEW (FunctionArgTuple);
 	type->m_functionArgTuple = tuple;
 	m_functionArgTupleList.insertTail (tuple);
 	return tuple;
@@ -2211,7 +2211,7 @@ TypeMgr::getDataPtrTypeTuple (Type* type)
 	if (type->m_dataPtrTypeTuple)
 		return type->m_dataPtrTypeTuple;
 
-	DataPtrTypeTuple* tuple = AXL_MEM_NEW (DataPtrTypeTuple);
+	DataPtrTypeTuple* tuple = AXL_MEM_ZERO_NEW (DataPtrTypeTuple);
 	type->m_dataPtrTypeTuple = tuple;
 	m_dataPtrTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2223,7 +2223,7 @@ TypeMgr::getClassPtrTypeTuple (ClassType* classType)
 	if (classType->m_classPtrTypeTuple)
 		return classType->m_classPtrTypeTuple;
 
-	ClassPtrTypeTuple* tuple = AXL_MEM_NEW (ClassPtrTypeTuple);
+	ClassPtrTypeTuple* tuple = AXL_MEM_ZERO_NEW (ClassPtrTypeTuple);
 	classType->m_classPtrTypeTuple = tuple;
 	m_classPtrTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2235,7 +2235,7 @@ TypeMgr::getEventClassPtrTypeTuple (MulticastClassType* classType)
 	if (classType->m_eventClassPtrTypeTuple)
 		return classType->m_eventClassPtrTypeTuple;
 
-	ClassPtrTypeTuple* tuple = AXL_MEM_NEW (ClassPtrTypeTuple);
+	ClassPtrTypeTuple* tuple = AXL_MEM_ZERO_NEW (ClassPtrTypeTuple);
 	classType->m_eventClassPtrTypeTuple = tuple;
 	m_classPtrTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2247,7 +2247,7 @@ TypeMgr::getFunctionPtrTypeTuple (FunctionType* functionType)
 	if (functionType->m_functionPtrTypeTuple)
 		return functionType->m_functionPtrTypeTuple;
 
-	FunctionPtrTypeTuple* tuple = AXL_MEM_NEW (FunctionPtrTypeTuple);
+	FunctionPtrTypeTuple* tuple = AXL_MEM_ZERO_NEW (FunctionPtrTypeTuple);
 	functionType->m_functionPtrTypeTuple = tuple;
 	m_functionPtrTypeTupleList.insertTail (tuple);
 	return tuple;
@@ -2259,7 +2259,7 @@ TypeMgr::getPropertyPtrTypeTuple (PropertyType* propertyType)
 	if (propertyType->m_propertyPtrTypeTuple)
 		return propertyType->m_propertyPtrTypeTuple;
 
-	PropertyPtrTypeTuple* tuple = AXL_MEM_NEW (PropertyPtrTypeTuple);
+	PropertyPtrTypeTuple* tuple = AXL_MEM_ZERO_NEW (PropertyPtrTypeTuple);
 	propertyType->m_propertyPtrTypeTuple = tuple;
 	m_propertyPtrTypeTupleList.insertTail (tuple);
 	return tuple;

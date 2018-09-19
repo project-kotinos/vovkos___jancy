@@ -108,76 +108,6 @@
 
 //..............................................................................
 
-// they changed the type model of llvm::DIBuilder in LLVM 3.7
-// therefore, we define and use version-neutral typedefs
-
-namespace llvm {
-
-#if (LLVM_VERSION < 0x0307)
-#	if (LLVM_VERSION < 0x0306)
-
-typedef DICompositeType DISubroutineType_vn;
-typedef Value Metadata;
-
-#	else
-
-typedef DISubroutineType DISubroutineType_vn;
-
-#	endif
-
-typedef DIArray DINodeArray;
-
-typedef DIType DIType_vn;
-typedef DICompositeType DICompositeType_vn;
-typedef DIGlobalVariable DIGlobalVariable_vn;
-typedef DIVariable DIVariable_vn;
-typedef DISubprogram DISubprogram_vn;
-typedef DILexicalBlock DILexicalBlock_vn;
-typedef DIScope DIScope_vn;
-typedef DIFile DIFile_vn;
-
-#else
-
-typedef DIType* DIType_vn;
-typedef DICompositeType* DICompositeType_vn;
-typedef DISubroutineType* DISubroutineType_vn;
-typedef DIGlobalVariable* DIGlobalVariable_vn;
-typedef DILocalVariable* DILocalVariable_vn;
-typedef DIVariable* DIVariable_vn;
-typedef DISubprogram* DISubprogram_vn;
-typedef DILexicalBlock* DILexicalBlock_vn;
-typedef DIScope* DIScope_vn;
-typedef DIFile* DIFile_vn;
-
-#endif
-
-
-#if (LLVM_VERSION < 0x0400)
-
-typedef unsigned DIFlags;
-
-#else
-
-typedef DINode::DIFlags DIFlags;
-
-#endif
-
-#if (LLVM_VERSION < 0x0500)
-
-typedef SynchronizationScope SynchronizationScope_vn;
-const SynchronizationScope DefaultSynchronizationScope_vn = CrossThread;
-
-#else
-
-typedef SyncScope::ID SynchronizationScope_vn;
-const SyncScope::ID DefaultSynchronizationScope_vn = llvm::SyncScope::System;
-
-#endif
-
-} // namespace llvm
-
-//..............................................................................
-
 // AXL
 
 #include "axl_mem_Block.h"
@@ -221,6 +151,75 @@ const SyncScope::ID DefaultSynchronizationScope_vn = llvm::SyncScope::System;
 #endif
 
 using namespace axl;
+
+//..............................................................................
+
+// they changed the type model of llvm::DIBuilder in LLVM 3.7
+// therefore, we define and use version-neutral typedefs
+
+namespace llvm {
+
+#if (LLVM_VERSION < 0x0307)
+#	if (LLVM_VERSION < 0x0306)
+
+typedef DICompositeType DISubroutineType_vn;
+typedef Value Metadata;
+
+#	else
+
+typedef DISubroutineType DISubroutineType_vn;
+
+#	endif
+
+typedef DIArray DINodeArray;
+
+typedef DIType DIType_vn;
+typedef DICompositeType DICompositeType_vn;
+typedef DIGlobalVariable DIGlobalVariable_vn;
+typedef DIVariable DIVariable_vn;
+typedef DISubprogram DISubprogram_vn;
+typedef DILexicalBlock DILexicalBlock_vn;
+typedef DIScope DIScope_vn;
+typedef DIFile DIFile_vn;
+
+#else
+
+typedef sl::InitializedPtr <DIType> DIType_vn;
+typedef sl::InitializedPtr <DICompositeType> DICompositeType_vn;
+typedef sl::InitializedPtr <DISubroutineType> DISubroutineType_vn;
+typedef sl::InitializedPtr <DIGlobalVariable> DIGlobalVariable_vn;
+typedef sl::InitializedPtr <DILocalVariable> DILocalVariable_vn;
+typedef sl::InitializedPtr <DIVariable> DIVariable_vn;
+typedef sl::InitializedPtr <DISubprogram> DISubprogram_vn;
+typedef sl::InitializedPtr <DILexicalBlock> DILexicalBlock_vn;
+typedef sl::InitializedPtr <DIScope> DIScope_vn;
+typedef sl::InitializedPtr <DIFile> DIFile_vn;
+
+#endif
+
+#if (LLVM_VERSION < 0x0400)
+
+typedef unsigned DIFlags;
+
+#else
+
+typedef DINode::DIFlags DIFlags;
+
+#endif
+
+#if (LLVM_VERSION < 0x0500)
+
+typedef SynchronizationScope SynchronizationScope_vn;
+const SynchronizationScope DefaultSynchronizationScope_vn = CrossThread;
+
+#else
+
+typedef SyncScope::ID SynchronizationScope_vn;
+const SyncScope::ID DefaultSynchronizationScope_vn = llvm::SyncScope::System;
+
+#endif
+
+} // namespace llvm
 
 //..............................................................................
 
