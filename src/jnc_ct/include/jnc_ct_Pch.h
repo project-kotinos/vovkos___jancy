@@ -157,6 +157,48 @@ using namespace axl;
 // they changed the type model of llvm::DIBuilder in LLVM 3.7
 // therefore, we define and use version-neutral typedefs
 
+template <typename T>
+class InitializedPtr
+{
+protected:
+	T* m_p;
+
+public:
+	InitializedPtr ()
+	{
+		m_p = NULL;
+	}
+
+	InitializedPtr (T* p)
+	{
+		m_p = p;
+	}
+
+	operator bool () const
+	{
+		return m_p != NULL;
+	}
+
+	template <typename T2>
+	operator T2* () const
+	{
+		return (T2*) m_p;
+	}
+
+	T*
+	operator -> () const
+	{
+		return m_p;
+	}
+
+	InitializedPtr&
+	operator = (T* p)
+	{
+		m_p = p;
+		return *this;
+	}
+};
+
 namespace llvm {
 
 #if (LLVM_VERSION < 0x0307)
@@ -184,16 +226,16 @@ typedef DIFile DIFile_vn;
 
 #else
 
-typedef sl::InitializedPtr <DIType> DIType_vn;
-typedef sl::InitializedPtr <DICompositeType> DICompositeType_vn;
-typedef sl::InitializedPtr <DISubroutineType> DISubroutineType_vn;
-typedef sl::InitializedPtr <DIGlobalVariable> DIGlobalVariable_vn;
-typedef sl::InitializedPtr <DILocalVariable> DILocalVariable_vn;
-typedef sl::InitializedPtr <DIVariable> DIVariable_vn;
-typedef sl::InitializedPtr <DISubprogram> DISubprogram_vn;
-typedef sl::InitializedPtr <DILexicalBlock> DILexicalBlock_vn;
-typedef sl::InitializedPtr <DIScope> DIScope_vn;
-typedef sl::InitializedPtr <DIFile> DIFile_vn;
+typedef InitializedPtr <DIType> DIType_vn;
+typedef InitializedPtr <DICompositeType> DICompositeType_vn;
+typedef InitializedPtr <DISubroutineType> DISubroutineType_vn;
+typedef InitializedPtr <DIGlobalVariable> DIGlobalVariable_vn;
+typedef InitializedPtr <DILocalVariable> DILocalVariable_vn;
+typedef InitializedPtr <DIVariable> DIVariable_vn;
+typedef InitializedPtr <DISubprogram> DISubprogram_vn;
+typedef InitializedPtr <DILexicalBlock> DILexicalBlock_vn;
+typedef InitializedPtr <DIScope> DIScope_vn;
+typedef InitializedPtr <DIFile> DIFile_vn;
 
 #endif
 
