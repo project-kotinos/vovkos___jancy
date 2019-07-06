@@ -1,0 +1,62 @@
+.. include:: def.rst
+.. include:: intro.rst
+
+.. toctree::
+	:hidden:
+
+	group_g2_crt.rst
+	group_stdlib.rst
+	group_iolib.rst
+	group_rtl.rst
+	group_g1_typedef.rst
+	group_syslib.rst
+
+.. rubric:: Further Reading:
+
+|	:ref:`C Runtime Functions<doxid-group_g2_crt>`
+|	:ref:`General Purpose Library<doxid-group_stdlib>`
+|		:ref:`Containers & Collections<doxid-group_container>`
+|		:ref:`Error Facilities<doxid-group_error>`
+|		:ref:`Miscellaneous Facilities<doxid-group_stdlib_misc>`
+|	:ref:`IO (Input/Output) Library<doxid-group_iolib>`
+|		:ref:`Device Monitoring<doxid-group_devmon>`
+|		:ref:`Generic File IO<doxid-group_file>`
+|		:ref:`Network Adapter Management<doxid-group_network_adapter>`
+|		:ref:`Pcap (Packet Capturing Library)<doxid-group_pcap>`
+|		:ref:`SSH Communications<doxid-group_ssh>`
+|		:ref:`Serial Communications<doxid-group_serial>`
+|		:ref:`Socket Communications<doxid-group_socket>`
+|		:ref:`USB Communications<doxid-group_usb>`
+|	:ref:`RTL (Runtime Library)<doxid-group_rtl>`
+|	:ref:`Standard Typedefs<doxid-group_g1_typedef>`
+|	:ref:`System Facilities<doxid-group_syslib>`
+|		:ref:`Garbage-Collected Heap<doxid-group_gc>`
+|		:ref:`Synchronization Facilities<doxid-group_sync>`
+|		:ref:`Thread Management<doxid-group_thread>`
+|		:ref:`Time & Timers<doxid-group_time>`
+
+
+.. toctree::
+	:hidden:
+
+	syncId.rst
+	disposable.rst
+	errorcode.rst
+
+.. rubric:: Related Pages:
+
+|	:doc:`syncId`
+|	:doc:`disposable`
+|	:doc:`errorcode`
+
+
+.. rubric:: Reference and Index:
+
+.. toctree::
+	:hidden:
+
+	global.rst
+
+|	:doc:`global`
+|	:ref:`genindex`
+

@@ -1,0 +1,22 @@
+.. index:: pair: struct; jnc_StructFieldFuncTable
+.. _doxid-structjnc___struct_field_func_table:
+
+struct jnc_StructFieldFuncTable
+===============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct jnc_StructFieldFuncTable {
+		// fields
+	
+		size_t :target:`m_size<doxid-structjnc___struct_field_func_table_1a37cbc3234c892b98571b26197ed824fc>`;
+		jnc_StructField_GetOffsetFunc* :target:`m_getOffsetFunc<doxid-structjnc___struct_field_func_table_1a4dc9ef7ae6e849f71a73242f62d28c5b>`;
+	};

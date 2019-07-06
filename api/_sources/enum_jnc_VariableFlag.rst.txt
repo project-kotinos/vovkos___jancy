@@ -1,0 +1,17 @@
+.. index:: pair: enum; jnc_VariableFlag
+.. _doxid-group__variable_1ga6a7a1f27429a896fe9874136261a4a83:
+
+enum jnc_VariableFlag
+=====================
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	#include <jnc_Variable.h>
+
+	enum jnc_VariableFlag {
+	    :target:`jnc_VariableFlag_Arg<doxid-group__variable_1gga6a7a1f27429a896fe9874136261a4a83a8b7ec18dd03b05f1c9d0d015962d81de>` = 0x010000,
+	};
+

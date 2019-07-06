@@ -1,0 +1,27 @@
+.. index:: pair: struct; jnc_NamespaceFuncTable
+.. _doxid-structjnc___namespace_func_table:
+
+struct jnc_NamespaceFuncTable
+=============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct jnc_NamespaceFuncTable {
+		// fields
+	
+		size_t :target:`m_size<doxid-structjnc___namespace_func_table_1a2d4f6b5510c36ec7356d76280d43eaba>`;
+		jnc_Namespace_GetItemCountFunc* :target:`m_getItemCountFunc<doxid-structjnc___namespace_func_table_1ab5134af5388b31b864b6b308c5289bf4>`;
+		jnc_Namespace_GetItemFunc* :target:`m_getItemFunc<doxid-structjnc___namespace_func_table_1aec2b77e8fbf20cf2ffb09fb6b2bf54f9>`;
+		jnc_Namespace_FindVariableFunc* :target:`m_findVariableFunc<doxid-structjnc___namespace_func_table_1ae0ed44703fda661f0284b2b4732ab9f8>`;
+		jnc_Namespace_FindFunctionFunc* :target:`m_findFunctionFunc<doxid-structjnc___namespace_func_table_1a8136940f01d775e1a4136112741235d0>`;
+		jnc_Namespace_FindPropertyFunc* :target:`m_findPropertyFunc<doxid-structjnc___namespace_func_table_1acf8fe2025f30333b33c17eecb75ae4a0>`;
+		jnc_Namespace_FindClassTypeFunc* :target:`m_findClassTypeFunc<doxid-structjnc___namespace_func_table_1a017cb605ac5824ac9dbae06799af5ddf>`;
+	};

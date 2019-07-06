@@ -1,0 +1,21 @@
+.. index:: pair: struct; jnc_VariableFuncTable
+.. _doxid-structjnc___variable_func_table:
+
+struct jnc_VariableFuncTable
+============================
+
+.. toctree::
+	:hidden:
+
+
+
+
+.. ref-code-block:: cpp
+	:class: doxyrest-overview-code-block
+
+	
+	struct jnc_VariableFuncTable {
+		// fields
+	
+		size_t :target:`m_size<doxid-structjnc___variable_func_table_1a36387b7d8264880e9a574ee9aa74b301>`;
+	};

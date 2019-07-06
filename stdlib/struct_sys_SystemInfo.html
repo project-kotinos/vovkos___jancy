@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>struct sys.SystemInfo &mdash; Jancy Standard Library Reference</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript">
+          var DOCUMENTATION_OPTIONS = {
+              URL_ROOT:'./',
+              VERSION:'1.8.5',
+              LANGUAGE:'None',
+              COLLAPSE_INDEX:false,
+              FILE_SUFFIX:'.html',
+              HAS_SOURCE:  true,
+              SOURCELINK_SUFFIX: '.txt'
+          };
+      </script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/target-highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/doxyrest-sphinx_rtd_theme.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="enum sys.OsKind" href="enum_sys_OsKind.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Jancy Standard Library Reference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.8
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="group_g2_crt.html">C Runtime Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_stdlib.html">General Purpose Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_iolib.html">IO (Input/Output) Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_rtl.html">RTL (Runtime Library)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_g1_typedef.html">Standard Typedefs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group_syslib.html">System Facilities</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="syncId.html">syncId Model Explanation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="disposable.html">Using Disposable Pattern</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errorcode.html">errorcode Functions</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="global.html">Global Namespace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_io.html">namespace io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_jnc.html">namespace jnc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_std.html">namespace std</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="namespace_sys.html">namespace sys</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="enum_sys_CppFlags.html">bitflag enum sys.CppFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_sys_CppKind.html">enum sys.CppKind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_sys_CpuKind.html">enum sys.CpuKind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_sys_OsFlags.html">bitflag enum sys.OsFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enum_sys_OsKind.html">enum sys.OsKind</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">struct sys.SystemInfo</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Jancy Standard Library Reference</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="global.html">Global Namespace</a> &raquo;</li>
+        
+          <li><a href="namespace_sys.html">namespace sys</a> &raquo;</li>
+        
+      <li>struct sys.SystemInfo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="struct-sys-systeminfo">
+<span id="doxid-type-sys-systeminfo"></span><span id="index-0"></span><h1>struct sys.SystemInfo</h1>
+<div class="toctree-wrapper compound">
+</div>
+<pre class="highlight doxyrest-overview-code-block literal-block">
+<span></span><span class="k">struct</span> <span class="n">SystemInfo</span>
+<span class="p">{</span>
+    <span class="c1">// fields</span>
+
+    <a class="reference internal" href="enum_sys_CpuKind.html#doxid-type-sys-cpukind"><span class="std std-ref">sys.CpuKind</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-cpukind">m_cpuKind</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="enum_sys_OsKind.html#doxid-type-sys-oskind"><span class="std std-ref">sys.OsKind</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-oskind">m_osKind</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="enum_sys_OsFlags.html#doxid-type-sys-osflags"><span class="std std-ref">sys.OsFlags</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-osflags">m_osFlags</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="enum_sys_CppKind.html#doxid-type-sys-cppkind"><span class="std std-ref">sys.CppKind</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-cppkind">m_cppKind</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="enum_sys_CppFlags.html#doxid-type-sys-cppflags"><span class="std std-ref">sys.CppFlags</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-cppflags">m_cppFlags</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="group_g1_typedef.html#doxid-typedef-uint-t"><span class="std std-ref">uint_t</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-processorcount">m_processorCount</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="group_g1_typedef.html#doxid-typedef-size-t"><span class="std std-ref">size_t</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-pagesize">m_pageSize</span><span></span><span class="p">;</span>
+    <a class="reference internal" href="group_g1_typedef.html#doxid-typedef-size-t"><span class="std std-ref">size_t</span></a><span></span> <span class="doxyrest-code-target target" id="doxid-struct-member-sys-systeminfo-m-mappingalignfactor">m_mappingAlignFactor</span><span></span><span class="p">;</span>
+<span class="p">};</span>
+</pre>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="enum_sys_OsKind.html" class="btn btn-neutral float-left" title="enum sys.OsKind" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2012-2019, Tibbo Technology Inc
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

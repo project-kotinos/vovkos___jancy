@@ -1,0 +1,32 @@
+.. include:: def.rst
+.. index:: pair: group; RTL (Runtime Library)
+.. _doxid-group_rtl:
+
+RTL (Runtime Library)
+=====================
+
+.. toctree::
+	:hidden:
+
+	struct_jnc_RegexMatch.rst
+	class_jnc_DynamicLib.rst
+	class_jnc_RegexState.rst
+	class_jnc_Scheduler.rst
+
+This section describes built-in types that are integral part of the language and constitute the RTL (runtime library) of the Jancy compiler.
+
+
+.. ref-code-block:: jancy
+	:class: doxyrest-overview-code-block
+
+	
+	// structs
+
+	struct :ref:`jnc.RegexMatch<doxid-type_jnc_regexmatch>`;
+
+	// classes
+
+	class :ref:`jnc.DynamicLib<doxid-type_jnc_dynamiclib>`;
+	class :ref:`jnc.RegexState<doxid-type_jnc_regexstate>`;
+	class :ref:`jnc.Scheduler<doxid-type_jnc_scheduler>`;
+

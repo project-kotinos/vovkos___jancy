@@ -1,0 +1,12 @@
+.. include:: def.rst
+.. index:: pair: group; Garbage-Collected Heap
+.. _doxid-group_gc:
+
+Garbage-Collected Heap
+======================
+
+.. toctree::
+	:hidden:
+
+This section describes types and facilities used for the GC (garbage-collected heap) management.
+

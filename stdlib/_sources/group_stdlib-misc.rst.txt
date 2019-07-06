@@ -1,0 +1,78 @@
+.. include:: def.rst
+.. index:: pair: group; Miscellaneous Facilities
+.. _doxid-group_stdlib_misc:
+
+Miscellaneous Facilities
+========================
+
+.. toctree::
+	:hidden:
+
+	enum_std_GuidStringFlags.rst
+	struct_std_Guid.rst
+
+Overview
+~~~~~~~~
+
+This section describes miscellaneous types and facilities of ``namespace std``. :ref:`More...<details-group_stdlib_misc>`
+
+
+.. ref-code-block:: jancy
+	:class: doxyrest-overview-code-block
+
+	
+	// enums
+
+	bitflag enum :ref:`std.GuidStringFlags<doxid-type_std_guidstringflags>`;
+
+	// structs
+
+	struct :ref:`std.Guid<doxid-type_std_guid>`;
+
+	// global functions
+
+	char const* cdecl :ref:`std.format<doxid-function_std_format>`(
+		char const* fmtSpecifier,
+		...
+		);
+
+.. _details-group_stdlib_misc:
+
+Detailed Documentation
+~~~~~~~~~~~~~~~~~~~~~~
+
+This section describes miscellaneous types and facilities of ``namespace std``.
+
+Global Functions
+----------------
+
+.. index:: pair: function; format
+.. _doxid-function_std_format:
+
+.. ref-code-block:: jancy
+	:class: doxyrest-title-code-block
+
+	char const* cdecl std.format(
+		char const* fmtSpecifier,
+		...
+		)
+
+Composes a string with the same text that would be printed if
+``fmtSpecifier`` was used in `printf` function, but instead of being
+printed, the content is stored in a memory buffer [#f3]_.
+
+Returns a pointer to null-terminated string containing the newly formatted
+text.
+
+For detailed description of format specifier ``fmtSpecifier`` please refer
+to: http://www.cplusplus.com/reference/cstdio/printf/
+
+
+---------------------
+
+.. rubric:: Footnotes
+
+.. [#f3]
+
+	Note that this function uses ``C`` vararg calling convention (and actually maps directly to libc ``snprintf``). As such, it is **not safe**. It is recommended to use formatting literals instead.
+
