@@ -12,9 +12,9 @@ build_targets:
     commands:
       - apt-get update
       - apt-get install -y build-essential g++  clang-6.0
-      - source ci/travis/set-env.sh
-      - bash ci/travis/install-linux.sh
-      - bash -e ci/travis/download-llvm.sh
+      - ./source
+      - ./i/travis/install-linux.sh
+      - ./ci/travis/download-llvm.sh
 
 ci:
   builds:
