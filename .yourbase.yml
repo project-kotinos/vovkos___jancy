@@ -1,0 +1,14 @@
+dependencies:
+  build:
+
+build_targets:
+  - name: default
+    environment:
+    commands:
+      - apt-get update
+      - apt-get install -y build-essential g++  clang-6.0
+
+ci:
+  builds:
+    - name: build
+      build_target: default
