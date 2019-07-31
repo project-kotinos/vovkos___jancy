@@ -4,9 +4,17 @@ dependencies:
 build_targets:
   - name: default
     environment:
+      - TRAVIS_OS_NAME=linux
+      - CC=clang
+      - BUILD_CONFIGURATION=debug
+      - LLVM_VERSION=3.4.2
+      - TARGET_CPU=amd64
     commands:
       - apt-get update
       - apt-get install -y build-essential g++  clang-6.0
+      - source ci/travis/set-env.sh
+      - bash ci/travis/install-linux.sh
+      - bash -e ci/travis/download-llvm.sh
 
 ci:
   builds:
