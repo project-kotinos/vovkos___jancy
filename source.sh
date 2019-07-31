@@ -1,0 +1,1 @@
+source ci/travis/set-env.sh

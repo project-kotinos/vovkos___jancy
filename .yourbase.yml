@@ -11,9 +11,9 @@ build_targets:
       - TARGET_CPU=amd64
     commands:
       - apt-get update
-      - apt-get install -y build-essential g++  clang-6.0
+      - apt-get install -y build-essential g++ clang-6.0
       - ./source.sh
-      - ./i/travis/install-linux.sh
+      - ./ci/travis/install-linux.sh
       - ./ci/travis/download-llvm.sh
 
 ci:
